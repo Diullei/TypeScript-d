@@ -1,0 +1,80 @@
+[
+	{ 
+		name: "backbone", 
+		versions: [
+			{version: "0.9.2", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/backbone-0.9.2.d.ts"}
+		]
+	},
+	{ 
+		name: "underscore", 
+		versions: [
+			{version: "0.8.8", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/underscore-1.4.2.d.ts"}
+		]
+	},
+	{ 
+		name: "nodejs;node", 
+		versions: [
+			{version: "1.4.2", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/node-0.8.8.d.ts"}
+		]
+	},
+	{ 
+		name: "underscore-string", 
+		versions: [
+			{version: "2.3.0", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/underscore-string-2.3.0.d.ts"}
+		]
+	},
+	{ 
+		name: "jquery", 
+		versions: [
+			{version: "1.7.x", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/jquery-1.7.x.d.ts"}
+		]
+	},
+	{ 
+		name: "bootstrap", 
+		versions: [
+			{version: "2.1.1", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/bootstrap-2.1.1.d.ts"}
+		]
+	},
+	{ 
+		name: "jquery-ui", 
+		versions: [
+			{version: "1.8.x", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/jquery-ui-1.8.x.d.ts"}
+		]
+	},
+	{ 
+		name: "knockout", 
+		versions: [
+			{version: "2.1.0", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/knockout-2.1.0.d.ts"}
+		]
+	},
+	{ 
+		name: "modernizr", 
+		versions: [
+			{version: "2.6.2", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/modernizr-2.6.2.d.ts"}
+		]
+	},
+	{ 
+		name: "mustache", 
+		versions: [
+			{version: "0.7", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/mustache-0.7.d.ts"}
+		]
+	},
+	{ 
+		name: "express", 
+		versions: [
+			{version: "3.0.0", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/express-3.0.0.d.ts"}
+		]
+	},
+	{ 
+		name: "moment", 
+		versions: [
+			{version: "1.7.2", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/moment-1.7.2.d.ts"}
+		]
+	},
+	{ 
+		name: "qunit", 
+		versions: [
+			{version: "1.10.0", url: "https://github.com/Diullei/TypeScript-d/raw/gh-pages/d.ts/qunit-1.10.0.d.ts"}
+		]
+	}
+]
