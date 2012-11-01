@@ -6,6 +6,14 @@ QUnit.test( "deepEqual test", function() {
     QUnit.deepEqual( obj, { foo: "bar" }, "Two objects can be the same in value" );
 });
 
+// ISSUE: https://github.com/Diullei/TypeScript-d/issues/2
+QUnit.test( "deepEqual test", function() {
+    var ar1 = [1,2,3,4];
+	var ar2 = [1,2,3,false];
+ 
+    QUnit.deepEqual( ar1, ar2, "Two objects can be the same in value" );
+});
+
 test( "deepEqual test", function() {
     var obj = { foo: "bar" };
  
@@ -119,7 +127,7 @@ QUnit.test( "throws", function() {
  
     QUnit.throws(
         function() {
-            //throw new CustomError();
+            throw new CustomError();
         },
         CustomError,
         "raised error is an instance of CustomError"

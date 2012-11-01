@@ -49,20 +49,20 @@ interface Config {
 }
 
 interface LifecycleObject {
-	setup: () => any;
-	teardown: () => any;
+	setup?: () => any;
+	teardown?: () => any;
 }
 
 interface QUnitAssert {
 	/* ASSERT */
-	deepEqual(actual: Object, expected: Object, message: string);
-	equal(actual: Object, expected: Object, message: string);
-	notDeepEqual(actual: Object, expected: Object, message: string);
-	notEqual(actual: Object, expected: Object, message: string);
-	notStrictEqual(actual: Object, expected: Object, message: string);
+	deepEqual(actual: any, expected: any, message: string);
+	equal(actual: any, expected: any, message: string);
+	notDeepEqual(actual: any, expected: any, message: string);
+	notEqual(actual: any, expected: any, message: string);
+	notStrictEqual(actual: any, expected: any, message: string);
 	ok(state: any, message: string);
-	strictEqual(actual: Object, expected: Object, message: string);
-	throws(block: () => any, expected: Object, message: string);
+	strictEqual(actual: any, expected: any, message: string);
+	throws(block: () => any, expected: any, message: string);
 	throws(block: () => any, message: string);
 }
 
@@ -70,7 +70,7 @@ interface QUnitStatic extends QUnitAssert{
 	/* ASYNC CONTROL */
 	start(decrement?: number);
 	stop(increment? : number);
-	
+
 	/* CALLBACKS */
 	begin(callback: () => any);
 	done(callback: (details: DoneCallbackObject) => any);
@@ -79,29 +79,27 @@ interface QUnitStatic extends QUnitAssert{
 	moduleStart(callback: (name: string) => any);
 	testDone(callback: (details: TestDoneCallbackObject) => any);
 	testStart(callback: (details: TestStartCallbackObject) => any);
-	
+
 	/* CONFIGURATION */
 	config: Config;
-	
+
 	/* TEST */
 	asyncTest(name: string, expected: number, test: () => any);
 	asyncTest(name: string, test: () => any);
 	expect(amount: number);
 	module(name: string, lifecycle?: LifecycleObject);
-	test(title: string, expected: number, test: (assert: QUnitAssert) => any);
-	test(title: string, test: (assert: QUnitAssert) => any);
-	//test(title: string, expected: number, test: (assert: any) => any);
-	//test(title: string, test: (assert: any) => any);
+	test(title: string, expected: number, test: (assert: any) => any);
+	test(title: string, test: (assert: any) => any);
 }
 
 /* ASSERT */
-declare var deepEqual: (actual: Object, expected: Object, message: string) => any;
-declare var equal: (actual: Object, expected: Object, message: string) => any;
-declare var notDeepEqual: (actual: Object, expected: Object, message: string) => any;
-declare var notEqual: (actual: Object, expected: Object, message: string) => any;
-declare var notStrictEqual: (actual: Object, expected: Object, message: string) => any;
+declare var deepEqual: (actual: any, expected: any, message: string) => any;
+declare var equal: (actual: any, expected: any, message: string) => any;
+declare var notDeepEqual: (actual: any, expected: any, message: string) => any;
+declare var notEqual: (actual: any, expected: any, message: string) => any;
+declare var notStrictEqual: (actual: any, expected: any, message: string) => any;
 declare var ok: (state: any, message: string) => any;
-declare var strictEqual: (actual: Object, expected: Object, message: string) => any;
+declare var strictEqual: (actual: any, expected: any, message: string) => any;
 // ** I Can't make overload here! :(
 //declare var throws: (block: () => void, expected: Object,  message: string) => any;
 declare var throws: (block: () => void, message: string) => any;
@@ -109,7 +107,7 @@ declare var throws: (block: () => void, message: string) => any;
 /* ASYNC CONTROL */
 declare var start: (decrement?: number) => any;
 declare var stop: (increment? : number) => any;
-	
+
 /* CALLBACKS */
 declare var begin: (callback: () => any) => any;
 declare var done: (callback: (details: DoneCallbackObject) => any) => any;
@@ -118,7 +116,7 @@ declare var moduleDone: (callback: (details: ModuleDoneCallbackObject) => any) =
 declare var moduleStart: (callback: (name: string) => any) => any;
 declare var testDone: (callback: (details: TestDoneCallbackObject) => any) => any;
 declare var testStart: (callback: (details: TestStartCallbackObject) => any) => any;
-	
+
 /* TEST */
 declare var asyncTest: (name: string, /*expected?: number, */test: () => any) => any;
 declare var expect: (amount: number) => any;

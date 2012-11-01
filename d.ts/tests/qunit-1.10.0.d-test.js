@@ -6,6 +6,21 @@ QUnit.test("deepEqual test", function () {
         foo: "bar"
     }, "Two objects can be the same in value");
 });
+QUnit.test("deepEqual test", function () {
+    var ar1 = [
+        1, 
+        2, 
+        3, 
+        4
+    ];
+    var ar2 = [
+        1, 
+        2, 
+        3, 
+        false
+    ];
+    QUnit.deepEqual(ar1, ar2, "Two objects can be the same in value");
+});
 test("deepEqual test", function () {
     var obj = {
         foo: "bar"
@@ -101,6 +116,7 @@ QUnit.test("throws", function () {
         throw "error";
     }, "throws with just a message, no expected");
     QUnit.throws(function () {
+        throw new CustomError();
     }, CustomError, "raised error is an instance of CustomError");
     QUnit.throws(function () {
         throw new CustomError("some error description");
