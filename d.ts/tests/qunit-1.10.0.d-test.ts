@@ -194,6 +194,20 @@ QUnit.module( "module A", {
     }
 });
 
+// ISSUE: https://github.com/Diullei/TypeScript-d/issues/3
+
+QUnit.module( "module A", {
+    setup: function() {
+        // prepare something for all following tests
+    }
+});
+
+QUnit.module( "module A", {
+    teardown: function() {
+        // clean up after each test
+    }
+});
+
 QUnit.test( "a test", function( assert ) {
  
     function square( x ) {

@@ -163,6 +163,14 @@ QUnit.module("module A", {
     teardown: function () {
     }
 });
+QUnit.module("module A", {
+    setup: function () {
+    }
+});
+QUnit.module("module A", {
+    teardown: function () {
+    }
+});
 QUnit.test("a test", function (assert) {
     function square(x) {
         return x * x;
